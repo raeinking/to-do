@@ -30,13 +30,15 @@
         border-bottom-left-radius: 25%;
         border-bottom-right-radius: 25%;
         display: flex;
-        justify-content: center;
-        align-items: center;
         text-align: center;
+        justify-content:center;
+        text-align: center;
+        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+
     }
 
     .date {
-        margin-top: 6vh;
+        margin-top: 4vh;
     }
 
     .header p {
@@ -46,16 +48,17 @@
 
     .footer {
         display: flex;
-        position: fixed;
+        position: absolute;
         height: 5vh ;
         width: 40px ;
         background-color: #a8c3e2;
         align-items: center;
         border-radius: 50%;
         justify-content: center;
-        bottom: 2vh;
-        right: 2vw;
+        right: 20px;
         cursor: pointer;
+        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+
     }
 
     .line1 {
