@@ -55,6 +55,7 @@
         justify-content: center;
         bottom: 2vh;
         right: 2vw;
+        cursor: pointer;
     }
 
     .line1 {
@@ -97,9 +98,12 @@
 
     input {
         margin-left: 30px;
-        margin-top: 1vh;
+        margin-top: 0.6vh;
         background-color:#a8c3e2;
         border-style: none;
-        color:#ffffff;
+        color:#493a3a;
         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+        text-align: center;
+        height: 30px;
+        width: 200px;
     }
