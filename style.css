@@ -1,113 +1,92 @@
      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: content-box;
-        font-family: "poppins", sans-serif;
-    }
-
-    body {
-        background-color:#efebe9;
-        position: absolute;
-        height: 100vh;
-        width: 100vw;
-    }
-
-    .to-do {
-        background-color:#ffffff;
-        height: 60vh;
-        max-height: 60vh;
-        width: 300px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-    }
-
-    .header {
-        background-color: #a8c3e2;
-        height: 10vh;  
-        border-bottom-left-radius: 25%;
-        border-bottom-right-radius: 25%;
-        display: flex;
-        text-align: center;
-        justify-content:center;
-        text-align: center;
-        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-
-    }
-
-    .date {
-        margin-top: 4vh;
-    }
-
-    .header p {
-        color: #ffffff;
-        
-    }
-
-    .footer {
-        display: flex;
-        position: absolute;
-        height: 5vh ;
-        width: 40px ;
-        background-color: #a8c3e2;
-        align-items: center;
-        border-radius: 50%;
-        justify-content: center;
-        right: 20px;
-        cursor: pointer;
-        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-
-    }
-
-    .line1 {
-        position: absolute;
-        width:20px;
-        height: 2px;
-        background-color:#ffffff;
-    }
-    .line2 {
-        width:2px;
-        height: 20px;
-        background-color:#ffffff;
-    }
-
-    p {
-        display: block;
-        height: 100%;
-        text-align: center;
-        justify-content:center;
-        align-items: center;
-    }
-
-    .main {
-        display: flex;
-        height: 43vh;
-        position: relative;
-    }
-
-    .all-list {
-        height:43vh;
-        list-style: none;
-        width: 100%;
-    }
-
-    li {   
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    input {
-        outline: none;
-        margin-left: 30px;
-        margin-top: 0.5vh;
-        background-color:#a8c3e2;
-        border-style: none;
-        color:#493a3a;
-        box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-        text-align: center;
-        height: 30px;
-        width: 200px;
-    }
+         margin: 0;
+         padding: 0;
+         box-sizing: content-box;
+         font-family: "poppins", sans-serif;
+     }
+     
+     body {
+         background-color: #96deeb;
+         position: relative;
+         min-height: 100vh;
+         width: 100vw;
+     }
+     
+     .to-do {
+         background-color: #ffffff;
+         min-height: 500px;
+         width: 300px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+         border-radius: 10px;
+     }
+     
+     .header {
+         background-color: #61a1eb;
+         width: 100%;
+         height: 60px;
+         border-bottom-left-radius: 25%;
+         border-bottom-right-radius: 25%;
+         border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+     }
+     
+     .header p {
+         color: #ffffff;
+     }
+     
+     .footer {
+         position: relative;
+         width: 100%;
+         height: 60px;
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+     }
+     
+     p {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     
+     .main {
+         display: flex;
+         height: 80%;
+         position: relative;
+     }
+     
+     .all-list {
+         height: 43vh;
+         list-style: none;
+         width: 100%;
+     }
+     
+     li {
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+     }
+     
+     #btn {
+         cursor: pointer;
+     }
+     
+     input {
+         outline: none;
+         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
+         border: 2px solid #61a1eb;
+         padding: 5px;
+         text-transform: capitalize;
+     }
+     
+     svg:hover {
+         fill: #0a0404;
+     }

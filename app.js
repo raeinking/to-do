@@ -1,10 +1,37 @@
-const lists = document.querySelector(".all-list")
-const text = document.querySelector(".text")
-const btn = document.querySelector(".footer")
+//selectors
+const timer = document.querySelector(".date");
+const input = document.getElementById("text")
+const btn = document.getElementById("btn")
+const ulEl = document.querySelector(".all-list")
+    //dates
+const currentTime = new Date();
+const day = currentTime.getDate();
+const month = currentTime.getMonth() + 1;
+const year = currentTime.getFullYear();
+
+const date = `${year}` + " " + `${month}` + " " + `${day}`;
+
+//create element
+const Eldiv = document.createElement("div");
+const Elli = document.createElement("li");
 
 
-text.addEventListener("input", function (e) {
-    const { value } = e.target;
+//child and parents
+const ElParentDiv = Eldiv.setAttribute("class", "test")
+timer.textContent = date;
 
-    main.innerHTML = marked(value);
+//add eventlistner
+btn.addEventListener('click', () => {
+    const test1 = input.parentElement;
+    const copy = input.value;
+    Elli.textContent = copy;
+    const node = document.createTextNode("divs");
+
+    // const test = copy.appendChild("Eldiv"); // error for value not hace element
+    input.value = '';
+    if (copy == "") {
+        window.alert("write something")
+    };
+
+
 })
