@@ -33,5 +33,5 @@ btn.addEventListener('click', () => {
         window.alert("write something")
     };
 
-    console.log()
+    
 })
