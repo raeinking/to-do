@@ -4,14 +4,14 @@
          box-sizing: content-box;
          font-family: "poppins", sans-serif;
      }
-     
+
      body {
          background-color: #96deeb;
          position: relative;
          min-height: 100vh;
          width: 100vw;
      }
-     
+
      .to-do {
          background-color: #ffffff;
          min-height: 500px;
@@ -23,7 +23,7 @@
          box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
          border-radius: 10px;
      }
-     
+
      .header {
          background-color: #61a1eb;
          width: 100%;
@@ -38,11 +38,11 @@
          box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
          margin-bottom: 10px;
      }
-     
+
      .header p {
          color: #ffffff;
      }
-     
+
      .footer {
          position: absolute;
          width: 100%;
@@ -52,46 +52,48 @@
          align-items: center;
          justify-content: space-around;
      }
-     
+
      p {
          display: flex;
          align-items: center;
          justify-content: center;
      }
-     
+
      .main {
          display: flex;
          height: 80%;
          position: relative;
      }
-     
+
      .all-list {
          height: 43vh;
          list-style: none;
          width: 100%;
      }
-     
+
      .list {
-        display: flex;
-        width: calc(100% - 3px);
-        justify-content: space-between;
+         display: flex;
+         width: calc(100% - 3px);
+         justify-content: space-between;
      }
+
      button {
-        padding: 10px;
-        margin: -3px;
-        width: 20px;
-        height: 20px;
-    }
-    img {
-        width:20px;
-        margin: 0px;
-        padding:0;
-    }
-     
+         padding: 10px;
+         margin: -3px;
+         width: 20px;
+         height: 20px;
+     }
+
+     img {
+         width: 20px;
+         margin: 0px;
+         padding: 0;
+     }
+
      #btn {
          cursor: pointer;
      }
-     
+
      input {
          outline: none;
          box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
@@ -100,7 +102,7 @@
          text-transform: capitalize;
          border-radius: 15px;
      }
-     
+
      svg:hover {
          fill: #0a0404;
      }

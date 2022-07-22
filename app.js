@@ -3,6 +3,8 @@ const timer = document.querySelector(".date");
 const input = document.getElementById("text")
 const btn = document.getElementById("btn")
 const ulEl = document.querySelector(".all-list")
+const del = document.querySelectorAll('#delet')
+
     //dates
 const currentTime = new Date();
 const day = currentTime.getDate();
@@ -30,8 +32,14 @@ btn.addEventListener('click', () => {
     // const test = copy.appendChild("Eldiv"); // error for value not hace element
     input.value = '';
     if (copy == "") {
-        window.alert("write something")
+        window.alert("Write something")
     };
-
-    
 })
+
+
+
+del.forEach(e => {
+    e.addEventListener('click', (a) => {
+        console.log(a.target.parentElement.parentElement.parentElement.remove())
+    })
+});
