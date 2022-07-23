@@ -109,3 +109,8 @@
         background-color: rgba(255, 0, 0, 0.452);
         color: rgb(0, 0, 0);
      }
+
+     .done {
+        color: rgb(187, 187, 187);
+        text-decoration: line-through;
+     }

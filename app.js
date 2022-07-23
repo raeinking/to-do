@@ -45,7 +45,10 @@ btn.addEventListener('click', () => {
         btnel.append(imgdelete)
         
         imgdelete.addEventListener("click",  (a) => {
-            console.log(a.target.parentElement.parentElement.remove())
+            a.target.parentElement.parentElement.remove()
         })
+        imgdcheck.addEventListener("click",  (a) => {
+            a.target.parentElement.parentElement.firstChild.classList.toggle('done')
+        })   
     }
 })
