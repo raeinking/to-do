@@ -3,9 +3,9 @@ const timer = document.querySelector(".date");
 const input = document.getElementById("text")
 const btn = document.getElementById("btn")
 const ulEl = document.querySelector(".all-list")
-const del = document.querySelectorAll('#delet')
+// const del = document.querySelectorAll('#delet')
 
-    //dates
+//dates
 const currentTime = new Date();
 const day = currentTime.getDate();
 const month = currentTime.getMonth() + 1;
@@ -13,33 +13,39 @@ const year = currentTime.getFullYear();
 
 const date = `${year}` + " " + `${month}` + " " + `${day}`;
 
-//create element
-const Eldiv = document.createElement("div");
-const Elli = document.createElement("li");
-
-
-//child and parents
-const ElParentDiv = Eldiv.setAttribute("class", "test")
 timer.textContent = date;
 
 //add eventlistner
 btn.addEventListener('click', () => {
-    const test1 = input.parentElement;
-    const copy = input.value;
-    Elli.textContent = copy;
-    const node = document.createTextNode("divs");
-
-    // const test = copy.appendChild("Eldiv"); // error for value not hace element
-    input.value = '';
-    if (copy == "") {
+    if (input.value == "") {
         window.alert("Write something")
-    };
+    }else{
+        const Eldiv = document.createElement("div");
+        Eldiv.setAttribute("class", 'list')
+        ulEl.append(Eldiv)
+        
+        const ptext = document.createElement("p");
+        ptext.textContent = input.value
+        Eldiv.appendChild(ptext);
+        
+        
+        const btnel = document.createElement('div')
+        btnel.setAttribute("class", "btns")
+        btn
+        Eldiv.append(btnel)
+        
+        const imgdcheck = document.createElement("p")
+        imgdcheck.setAttribute("class", "check")
+        imgdcheck.textContent = 'done'
+        btnel.append(imgdcheck)
+        
+        const imgdelete = document.createElement("p")
+        imgdelete.setAttribute("class", "delete")
+        imgdelete.textContent = 'delete'
+        btnel.append(imgdelete)
+        
+        imgdelete.addEventListener("click",  (a) => {
+            console.log(a.target.parentElement.parentElement.remove())
+        })
+    }
 })
-
-
-
-del.forEach(e => {
-    e.addEventListener('click', (a) => {
-        console.log(a.target.parentElement.parentElement.parentElement.remove())
-    })
-});
