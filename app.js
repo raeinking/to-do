@@ -3,7 +3,6 @@ const timer = document.querySelector(".date");
 const input = document.getElementById("text")
 const btn = document.getElementById("btn")
 const ulEl = document.querySelector(".all-list")
-// const del = document.querySelectorAll('#delet')
 
 //dates
 const currentTime = new Date();
@@ -28,7 +27,6 @@ btn.addEventListener('click', () => {
         ptext.textContent = input.value
         Eldiv.appendChild(ptext);
         
-        
         const btnel = document.createElement('div')
         btnel.setAttribute("class", "btns")
         btn
@@ -47,6 +45,7 @@ btn.addEventListener('click', () => {
         imgdelete.addEventListener("click",  (a) => {
             a.target.parentElement.parentElement.remove()
         })
+        
         imgdcheck.addEventListener("click",  (a) => {
             a.target.parentElement.parentElement.firstChild.classList.toggle('done')
         })   
