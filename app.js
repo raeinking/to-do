@@ -1,4 +1,4 @@
-//selectors
+//selector
 const timer = document.querySelector(".date");
 const input = document.getElementById("text")
 const btn = document.getElementById("btn")
