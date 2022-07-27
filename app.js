@@ -29,7 +29,6 @@ btn.addEventListener('click', () => {
         
         const btnel = document.createElement('div')
         btnel.setAttribute("class", "btns")
-        btn
         Eldiv.append(btnel)
         
         const imgdcheck = document.createElement("p")
