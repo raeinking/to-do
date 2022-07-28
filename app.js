@@ -1,52 +1,54 @@
-//selector
-const timer = document.querySelector(".date");
-const input = document.getElementById("text")
-const btn = document.getElementById("btn")
-const ulEl = document.querySelector(".all-list")
+// selector
+const data = document.getElementById('data')
+const btn = document.getElementById('btn')
+const input = document.getElementById('text')
+const allList = document.getElementById('all-list')
 
-//dates
+// time
 const currentTime = new Date();
-const day = currentTime.getDate();
-const month = currentTime.getMonth() + 1;
-const year = currentTime.getFullYear();
+const year = currentTime.getFullYear()
+const month = currentTime.getMonth()
+const day = currentTime.getDay()
 
-const date = `${year}` + " " + `${month}` + " " + `${day}`;
+const fullTime = `${year} ${month + 1} ${day}`
 
-timer.textContent = date;
+data.textContent = fullTime
 
-//add eventlistner
+// add event leistner
 btn.addEventListener('click', () => {
-    if (input.value == "") {
-        window.alert("Write something")
-    }else{
-        const Eldiv = document.createElement("div");
-        Eldiv.setAttribute("class", 'list')
-        ulEl.append(Eldiv)
+    if (input.value == '') {
+        alert('pleas weite somthing')
+    } else {
+        const list = document.createElement('div');
+        list.setAttribute('class' , 'list')
+        allList.append(list)
+
+        const plist = document.createElement('p')
+        plist.textContent = input.value;
+        list.append(plist)
+
         
-        const ptext = document.createElement("p");
-        ptext.textContent = input.value
-        Eldiv.appendChild(ptext);
-        
-        const btnel = document.createElement('div')
-        btnel.setAttribute("class", "btns")
-        Eldiv.append(btnel)
-        
-        const imgdcheck = document.createElement("p")
-        imgdcheck.setAttribute("class", "check")
-        imgdcheck.textContent = 'done'
-        btnel.append(imgdcheck)
-        
-        const imgdelete = document.createElement("p")
-        imgdelete.setAttribute("class", "delete")
-        imgdelete.textContent = 'delete'
-        btnel.append(imgdelete)
-        
-        imgdelete.addEventListener("click",  (a) => {
-            a.target.parentElement.parentElement.remove()
+        const divlist = document.createElement('div')
+        divlist.setAttribute('class' ,'btn')
+        divlist.setAttribute('id' , 'but')
+        list.append(divlist)
+
+        const pdone = document.createElement('p')
+        pdone.setAttribute('class' , 'done')
+        pdone.textContent = 'done'
+        divlist.append(pdone)
+
+        const pdelete = document.createElement('p')
+        pdelete.setAttribute('class' , 'delete')
+        pdelete.textContent = 'delete';
+        divlist.append(pdelete)
+
+        pdone.addEventListener('click', (e) => {
+            e.target.parentElement.parentElement.firstChild.classList.toggle('itsdone')  
         })
-        
-        imgdcheck.addEventListener("click",  (a) => {
-            a.target.parentElement.parentElement.firstChild.classList.toggle('done')
-        })   
+        pdelete.addEventListener('click', (e) => {
+            e.target.parentElement.parentElement.remove()
+        })
+
     }
 })
