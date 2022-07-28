@@ -1,116 +1,102 @@
      * {
-         margin: 0;
-         padding: 0;
-         box-sizing: content-box;
-         font-family: "poppins", sans-serif;
-     }
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-     body {
-         background-color: #96deeb;
-         position: relative;
-         min-height: 100vh;
-         width: 100vw;
-     }
+body {
+    background-color: #96deeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-     .to-do {
-         background-color: #ffffff;
-         min-height: 500px;
-         width: 300px;
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-         border-radius: 10px;
-     }
+form {
+    background-color: white;
+    width: 300px;
+    height: 500px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-radius: 10px;
+    position: relative;
+}
 
-     .header {
-         background-color: #61a1eb;
-         width: 100%;
-         height: 60px;
-         border-bottom-left-radius: 25%;
-         border-bottom-right-radius: 25%;
-         border-top-left-radius: 10px;
-         border-top-right-radius: 10px;
-         display: flex;
-         justify-content: center;
-         text-align: center;
-         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-         margin-bottom: 10px;
-     }
+.header {
+    background-color: #61a1eb;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+.header p {
+    color:aliceblue
+}
 
-     .header p {
-         color: #ffffff;
-     }
+.footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-     .footer {
-         position: absolute;
-         width: 100%;
-         height: 60px;
-         bottom: 0;
-         display: flex;
-         align-items: center;
-         justify-content: space-around;
-     }
+input {
+    border: 2px solid #61a1eb;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px 10px;
+    height: 20px;
+}
 
-     p {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-     }
+svg:hover {
+    cursor: pointer;
+    fill: #0a0404;
+}
 
-     .main {
-         display: flex;
-         height: 80%;
-         position: relative;
-     }
+.all-list {
+    width: 100%;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    padding:  5px;
+    overflow: hidden;
+    overflow: auto;
+}
 
-     .all-list {
-         height: 22rem;
-         list-style: none;
-         width: 100%;
-         overflow: auto;
-         z-index: 3;
-     }
+.list {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0
+}
 
-     .list {
-         display: flex;
-         width: calc(100% - 3px);
-         justify-content: space-between;
-         margin-top: 5px;
-     }
+.btn {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
+}
 
-     .btns {
-         cursor: pointer;
-         margin: 0;
-         display: flex;
-         width: 100px;
-         justify-content: space-around;
-     }
+.done {
+    background-color: rgb(164, 255, 177);
+    cursor: pointer
+}
 
-     input {
-         outline: none;
-         box-shadow: 2px 8px 8px 2px rgba(41, 41, 41, 0.1);
-         border: 2px solid #61a1eb;
-         padding: 5px;
-         text-transform: capitalize;
-         border-radius: 15px;
-     }
+.delete {
+    background-color: rgba(255, 0, 0, 0.452);
+    color: rgb(0, 0, 0);
+    cursor:pointer
+}
 
-     svg:hover {
-         fill: #0a0404;
-         cursor: pointer
-     }
-
-     .check {
-        background-color:rgb(164, 255, 177);
-     }
-     .delete {
-        background-color: rgba(255, 0, 0, 0.452);
-        color: rgb(0, 0, 0);
-     }
-
-     .done {
-        color: rgb(187, 187, 187);
-        text-decoration: line-through;
-     }
+.itsdone {
+    color: rgb(187, 187, 187);
+    text-decoration: line-through;
+}
