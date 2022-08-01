@@ -10,7 +10,7 @@ const year = currentTime.getFullYear()
 const month = currentTime.getMonth()
 const day = currentTime.getDay()
 
-const fullTime = `${year} ${month + 1} ${day}`
+const fullTime = `${year} ${month + 1} ${day + 1}`
 
 data.textContent = fullTime
 
